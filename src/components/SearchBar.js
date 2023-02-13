@@ -17,6 +17,7 @@ export default function SearchBar() {
       setCapsuleData(data);
     }
     if (query === "landings") {
+      // eslint-disable-next-line
       const data = capsuleData.filter((item) => item.landings == value);
       setCapsuleData(data);
     }
@@ -31,6 +32,7 @@ export default function SearchBar() {
       setogCapsuleData(capsuleData);
       console.log("done");
     }
+    // eslint-disable-next-line
   }, [capsuleData]);
   return (
     <div className="m-6 p-6 bg-white rounded-lg flex justify-center">
