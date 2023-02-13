@@ -1,5 +1,6 @@
 import { Layout } from "antd";
 import { Content, Footer, Header } from "antd/es/layout/layout";
+import Banner from "./components/Banner";
 import HeaderContent from "./components/HeaderContent";
 
 function App() {
@@ -7,16 +8,14 @@ function App() {
     <>
       <Layout>
         <Header>
-          <HeaderContent/>
+          <HeaderContent />
         </Header>
 
         <Content>
-
+          <Banner />
         </Content>
 
-        <Footer>
-
-        </Footer>
+        <Footer>Hello</Footer>
       </Layout>
     </>
   );
