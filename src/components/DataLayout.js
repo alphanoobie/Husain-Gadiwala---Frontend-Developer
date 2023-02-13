@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useEffect } from "react";
 import DataCard from "./DataCard";
 import { useState } from "react";
-import { Space, Spin } from "antd";
+import { Spin } from "antd";
 
 export default function DataLayout() {
   const [capsuleData, setCapsuleData] = useState([]);
