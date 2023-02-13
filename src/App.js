@@ -2,6 +2,7 @@ import { Layout } from "antd";
 import { Content, Footer, Header } from "antd/es/layout/layout";
 import Banner from "./components/Banner";
 import HeaderContent from "./components/HeaderContent";
+import SearchBar from "./components/SearchBar";
 
 function App() {
   return (
@@ -13,9 +14,10 @@ function App() {
 
         <Content>
           <Banner />
+          <SearchBar />
         </Content>
 
-        <Footer>Hello</Footer>
+        <Footer></Footer>
       </Layout>
     </>
   );
