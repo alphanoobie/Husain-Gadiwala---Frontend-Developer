@@ -1,6 +1,7 @@
 import { Layout } from "antd";
 import { Content, Footer, Header } from "antd/es/layout/layout";
 import Banner from "./components/Banner";
+import DataLayout from "./components/DataLayout";
 import HeaderContent from "./components/HeaderContent";
 import SearchBar from "./components/SearchBar";
 
@@ -15,6 +16,7 @@ function App() {
         <Content>
           <Banner />
           <SearchBar />
+          <DataLayout />
         </Content>
 
         <Footer></Footer>
