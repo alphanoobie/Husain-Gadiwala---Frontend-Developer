@@ -1,26 +1,37 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect } from "react";
 import DataCard from "./DataCard";
+import { useState } from "react";
+import { Space, Spin } from "antd";
 
 export default function DataLayout() {
-  const sampleData = {
-    capsule_serial: "C101",
-    capsule_id: "dragon1",
-    status: "retired",
-    original_launch: "2010-12-08T15:43:00.000Z",
-    original_launch_unix: 1291822980,
-    missions: [
-      {
-        name: "COTS 1",
-        flight: 7,
-      },
-    ],
-    landings: 0,
-    type: "Dragon 1.0",
-    details: "Reentered after three weeks in orbit",
-    reuse_count: 0,
+  const [capsuleData, setCapsuleData] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  const getData = async () => {
+    const data = await axios.get("https://api.spacexdata.com/v3/capsules");
+    setCapsuleData(data.data);
+    setLoading(false);
   };
 
-  return <div className="m-6 p-6 bg-white rounded">
-    <DataCard data={sampleData}/>
-  </div>;
+  useEffect(() => {
+    getData();
+  }, []);
+
+  return (
+    <div className="m-6 p-6 bg-white rounded">
+      {loading ? (
+        <div className="flex justify-center">
+          <Spin />
+        </div>
+      ) : (
+        <div className="flex flex-wrap justify-center">
+          {capsuleData &&
+            capsuleData.map((data, index) => {
+              return <DataCard data={data} />;
+            })}
+        </div>
+      )}
+    </div>
+  );
 }

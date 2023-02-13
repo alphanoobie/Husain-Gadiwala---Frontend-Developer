@@ -4,7 +4,7 @@ import React from "react";
 export default function DataCard({ data }) {
   return (
     <Card
-      className="w-fit"
+      className="w-fit m-3"
       title={
         <Space>
           <p>Serial :</p> <p>{data.capsule_serial}</p>
