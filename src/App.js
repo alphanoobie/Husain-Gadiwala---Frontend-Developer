@@ -4,6 +4,7 @@ import axios from "axios";
 import { createContext, useEffect, useState } from "react";
 import Banner from "./components/Banner";
 import DataLayout from "./components/DataLayout";
+import FooterContent from "./components/FooterContent";
 import HeaderContent from "./components/HeaderContent";
 import SearchBar from "./components/SearchBar";
 
@@ -11,7 +12,7 @@ export const CapsuleContext = createContext();
 
 function App() {
   const [capsuleData, setCapsuleData] = useState([]);
-  const value = {capsuleData, setCapsuleData}
+  const value = { capsuleData, setCapsuleData };
 
   const getData = async () => {
     const data = await axios.get("https://api.spacexdata.com/v3/capsules");
@@ -20,7 +21,6 @@ function App() {
 
   useEffect(() => {
     getData();
-
   }, []);
 
   return (
@@ -36,7 +36,9 @@ function App() {
           <DataLayout />
         </Content>
 
-        <Footer></Footer>
+        <Footer>
+          <FooterContent />
+        </Footer>
       </Layout>
     </CapsuleContext.Provider>
   );
