@@ -1,5 +1,6 @@
 import { Card, Space } from "antd";
 import React from "react";
+import MoreInfo from "./MoreInfo";
 
 export default function DataCard({ data }) {
   return (
@@ -10,11 +11,7 @@ export default function DataCard({ data }) {
           <p>Serial :</p> <p>{data.capsule_serial}</p>
         </Space>
       }
-      extra={
-        <a className="underline" href="www.google.com">
-          More
-        </a>
-      }
+      extra={<MoreInfo data={data}/>}
     >
       <div className="pr-10">
         <Space>
