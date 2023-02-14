@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Husain-Gadiwala---Frontend-Developer/static/css/main.cf0a86f8.css",
-    "main.js": "/Husain-Gadiwala---Frontend-Developer/static/js/main.7b0c67e9.js",
+    "main.js": "/Husain-Gadiwala---Frontend-Developer/static/js/main.a6ff3a3b.js",
     "index.html": "/Husain-Gadiwala---Frontend-Developer/index.html",
     "main.cf0a86f8.css.map": "/Husain-Gadiwala---Frontend-Developer/static/css/main.cf0a86f8.css.map",
-    "main.7b0c67e9.js.map": "/Husain-Gadiwala---Frontend-Developer/static/js/main.7b0c67e9.js.map"
+    "main.a6ff3a3b.js.map": "/Husain-Gadiwala---Frontend-Developer/static/js/main.a6ff3a3b.js.map"
   },
   "entrypoints": [
     "static/css/main.cf0a86f8.css",
-    "static/js/main.7b0c67e9.js"
+    "static/js/main.a6ff3a3b.js"
   ]
 }
